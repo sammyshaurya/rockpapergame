@@ -3,28 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper and Scissors</title>
+    <title>Rock Paper Scissors</title>
     <style>
         body {
-            margin-top:4%;
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        button {
+
+        .container {
             text-align: center;
-            margin: 16px;
-            font-size:16px;
-            padding: 10px 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #res {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        /* Media queries for responsive design */
+        @media only screen and (max-width: 600px) {
+            button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            #res {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <button onclick="playgame('rock')"> Rock</button>
-    <button onclick="playgame('paper')"> Paper</button>
-    <button onclick="playgame('scissors')"> Scissors</button>
-    <p id="res"></p>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <button onclick="playgame('rock')">Rock</button>
+        <button onclick="playgame('paper')">Paper</button>
+        <button onclick="playgame('scissors')">Scissors</button>
+        <p id="res"></p>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
